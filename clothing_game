@@ -1,0 +1,38 @@
+# Make a weather/clothing game ## project
+# IF statements
+# Ask for user input and depending on the response advise on their attire.
+#
+# prompt user for input
+# Evaluate each input and print the appropriate responses
+# Follow these rules:
+#
+# when sunny >> respond with 'take your shorts!'
+# stormy >> respond with 'take rain coat'
+# rainy >> respond with 'Take your umbrella'
+# rainy and stormy >> 'stay home'
+# anything else respond with 'sorry, i didn't quite catch that'
+# Make it so you keep playing until we say: 'No more Magic'
+
+
+
+play_game = 'GO'
+
+while play_game != 'no more magic':
+
+    weather = input(" What's the weather like today?\n(Sunny, Rainy, Stormy, Rainy & Stormy) :").capitalize().strip()
+
+    if weather.lower() == 'stormy':
+        print('take rain coat')
+
+    elif 'rainy' in weather.lower() and 'stormy' in weather.lower():
+        print('Stay Home')
+
+    elif 'sunny' in weather.lower():
+        print('Take your shorts')
+
+    elif weather == 'Rainy':
+        print('Take your umbrella')
+    else:
+        print('I can only understand keywords Sunny, Rainy, Stormy and Rainy & Stormy.')
+
+    play_game = (input('To stop game, enter "No More Magic", otherwise hit enter! :')).lower()
